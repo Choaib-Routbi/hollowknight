@@ -1,0 +1,651 @@
+:root{
+    --fontfamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --green: rgb(0, 150, 58);
+}
+@font-face {
+    font-family: "sectionTitle";
+    src: url(HeadlinesUniBSemiBoldTrial.otf);
+}
+@font-face {
+    font-family: "subTitle";
+    src: url(BubblyRegular.ttf);
+}
+@font-face {
+    font-family: "myft";
+    src: url(../../../fontawesome-free-6.5.1-web/webfonts/fa-brands-400.ttf);
+}
+body{
+    background-color: rgb(0, 0, 0);
+    margin: 0px;
+    height: 13200px;
+    overflow-x: hidden;
+}
+/* --------------------------- home -------------------------------------*/
+/* --------------------------------------------------------------------- */
+
+#home-bg{
+    width: 100%;
+    height: 100%;
+    filter:opacity(70%);
+}
+
+#home{
+    margin-top: 0px;
+}
+/* #home{
+    padding: 30px;
+} */
+#home > h1{
+    color: aliceblue;
+    font-size: 50px;
+    font-family: var(--fontfamily);
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    margin: 0px;
+    z-index: 1000;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.502);
+}
+.home_title{
+    color: aliceblue;
+    font-size: 350px;
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translate(0%,-50%);
+    font-family: sans-serif,serif ;
+    font-weight: 800;
+    line-height: 230px;
+    text-shadow: 0px -20px 100px rgba(13, 144, 53, 0.525);
+}
+.home_title::first-letter{
+    color: var(--green);
+}
+#sub-home-title{
+    color: aliceblue;
+    font-size: 120px;
+    position: absolute;
+    left: 70px;
+    top: 63%;
+    transform: translate(0%,-50%);
+    /* font-family: sans-serif,serif ; */
+    font-family: subTitle;
+    font-weight: 300;
+    text-shadow: 0px -20px 100px rgba(13, 144, 53, 0.525);
+}
+nav{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    position: fixed;
+    top: 50px;
+    right: 5%;
+    font-size: 50px;
+    font-family: var(--fontfamily);
+    column-gap: 150px;
+    z-index: 100;
+}
+nav > a {
+    text-decoration: none;
+    color: aliceblue;
+    text-shadow: 0px 0px 40px rgb(32, 45, 36);
+    text-align: center;
+    width: 200px;
+    padding: 5px 30px;
+    border-radius: 15px;
+    transition: all ease 0.2s;
+
+}
+.nav_a_clicked{
+    background-color: var(--green);
+    border-radius: 15px;
+}
+.section_title{
+    color: aliceblue;
+    font-size: 150px;
+    font-family: sectionTitle;
+    position: absolute;
+    top:130px;
+    left: 50px;
+    z-index: 20;
+}
+#swipToBottom{
+    position: absolute;
+    left: 50%;
+    top: 94%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    justify-items: center;
+    animation: swipDown infinite 2s linear;
+    transition: all linear 0.2s;
+}
+#swipToBottomPrgrph{
+    color: aliceblue;
+    font-size: 50px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    margin-bottom: 10%;
+    text-shadow: 0px 10px 40px #000000;
+    user-select: none;
+}
+#swipDown{
+    fill: aliceblue;
+    height: 50px;
+    text-shadow: 0px 10px 40px #000000;
+    rotate: 180deg;
+}
+@keyframes swipDown {
+    0%{
+        top: 94%;
+    }
+    50%{
+        top: 96%;
+    }
+    100%{
+        top: 94%;
+    }
+}
+/* ---------|about the game-------------------------------------------- */
+#about_game{
+    position: relative;
+    height: 2500px;
+    width: 100%;
+    z-index: -1;
+    /* background: rgba(255, 253, 253, 0.096); */
+}
+#game_discription{
+    color: aliceblue;
+    font-size: 90px;
+    font-family:var(--fontfamily);
+    font-weight: 400;
+    width: 85%;
+    position: absolute;
+    top:500px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    text-indent: 200px;
+    text-align: center;
+    transition: all ease 1s;
+    opacity: 0;
+
+}
+
+#geo_png1{
+    height: 500px;
+    width: 500px;
+    position: absolute;
+    top: 100px;
+    right: -500px;
+}
+#geo_png2{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    top: 1200px;
+    left: -400px;
+    
+
+}
+#geo_png3{
+    height: 460px;
+    width: 460px;
+    /* rotate: 170deg; */
+    position: absolute;
+    /* top: 1200px; */
+    bottom: -200px;
+    right: -500px;
+    
+    
+}
+#geo_png4{
+    height: 380px;
+    width: 380px;
+    position: absolute;
+    top: 3200px;
+    left: -450px;    
+
+}
+#geo_png5{
+    height: 450px;
+    width: 450px;
+    /* rotate: 170deg; */
+    position: absolute;
+    /* top: 1200px; */
+    bottom: -2300px;
+    right: -500px;
+    
+    
+}
+#game_info{
+    color: aliceblue;
+    font-size: 90px;
+    font-family:var(--fontfamily);
+    font-weight: 400;
+    width: 60%;
+    position: absolute;
+    top:1200px;
+    left: 50%;
+    transform: translate(-50%,0%);
+    word-spacing: 10px;
+    opacity: 0;
+    /* text-indent: 200px; */
+    /* text-align: center; */
+}
+.game_info_spans{
+    color: var(--green);
+}
+
+
+/* --------------------------- game map --------------------------------- */
+
+#game_map{
+    position: relative;
+    height: 2500px;
+    width: 100%;
+    z-index: 1;
+    /* background: rgba(255, 253, 253, 0.078); */
+}
+#mapv1{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    border: solid 10px var(--green);
+    height: 2000px;
+    box-shadow: 0px 0px 50px #000;
+    
+
+}
+#mapv2{
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    border: solid 10px var(--green);
+    height: 2000px;
+    box-shadow: 0px 0px 50px #000;
+
+
+
+}
+#map_switch{
+    position: absolute;
+    top: 53%;
+    left: 90%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    z-index: 10;
+    font-size: 50px;
+    color: aliceblue;
+    column-gap: 50px;
+    align-items: center;
+}
+.circles{
+    background-color: rgba(145, 145, 145, 0.356);
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.circles:hover{
+    background-color: rgba(145, 145, 145, 0.568);
+
+}
+.switch_map_text{
+    border-left:solid rgba(240, 248, 255, 0.438) 2px ;
+    border-right:solid rgba(240, 248, 255, 0.438) 2px ;
+    padding:0px 50px;
+    width: 300px;
+}
+
+/* #map_cntainer{
+    background-image: url(imgs/HKmapV2.jpg);
+    background-position: center;
+    height: 2000px;
+    width:60%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    border: solid 10px var(--green);
+
+} */
+
+/* --------------------------- game sharms --------------------------------- */
+
+#game_charms{
+    position: relative;
+    height: 2500px;
+    width: 100%;
+    z-index: 1;
+    /* background: rgba(255, 253, 253, 0.183); */
+}
+#cards_container{
+    height: 1800px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: grid;
+    grid-template-columns: repeat(9,auto);
+    justify-content:center;
+    gap: 100px;
+}
+.cards{
+    position: relative;
+}
+
+.back{
+    /* padding-top: 100px; */
+    position: relative;
+    height: 300px;
+    width: 300px;
+    font-size: 50px;
+    font-family: var(--fontfamily);
+    text-align: center;
+    border-radius: 15px;
+    background-color: transparent;
+    transition: all ease 0.3s;
+    color: aliceblue;
+    cursor: pointer;
+
+}
+
+.back:hover{
+    translate: 0px -25px;
+    
+}
+/* .bounce{
+    transition: all ease 2s;
+    animation-name: bounce;
+    animation-iteration-count: infinite;
+    translate: 0px 0px;
+
+}
+@keyframes bounce {
+    0%{
+        translate: 0px 0px;
+    }
+    50%{
+        translate: 0px -100px;
+    }
+    100%{
+        translate: 0px 0px;
+    }
+} */
+.geo_card1{
+    height: 100%;
+    width: 100%;
+}
+#charm_help_ctnr{
+    display: none;
+}
+#charm_info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 1300px;
+    width: 40%;
+    background-color: rgba(0, 123, 117, 0.336);
+    backdrop-filter: blur(70px);
+    border-radius: 100px;
+    /* border: 10px solid var(--green); */
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    font-family: var(--fontfamily);
+    padding: 50px;
+    z-index: 111;
+}
+#charm_name{
+    font-size: 140px;
+    margin: 0px;
+    text-align: center;
+}
+#charm_use{
+    font-size: 70px;
+    margin: 0px;
+}
+#location_svg{
+    fill: var(--green);
+    height: 150px;
+    width: 150px;
+    margin: 0px;
+}
+#charm_location{
+    font-size: 70px;
+    margin: 0px;
+    margin-top: -100px;
+}
+#close{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 80px;
+    width: 100px;
+    font-size: 70px;
+    text-align: center;
+    font-family: var(--fontfamily);
+    border-radius: 0px 25px 0px 25px ;
+    padding-bottom: 15px;
+    background-color: rgb(204, 102, 65);
+    cursor: pointer;
+    user-select: none;
+}
+#close:hover{
+    background-color: rgb(232, 110, 66);
+
+}
+
+
+/* --------------------------- game bosses --------------------------------- */
+
+#game_bosses{
+    position: relative;
+    height: 2500px;
+    width: 100%;
+    z-index: 1;
+    /* background: rgba(255, 253, 253, 0.183); */
+}
+#bosses_container{
+    height: 1800px;
+    width: 70%;
+    /* overflow-x: scroll; */
+    position: absolute;
+    top: 48%;
+    left: 55%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    gap: 500px;
+    justify-content: center;
+    align-items:center ;
+    transition: all ease 0.5s;
+}
+
+.boss_img{
+    cursor: pointer;
+    scale: 2;
+}
+#list_shadow{
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    z-index: 10;
+}
+.goDirction{
+    background-color:var(--green);
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    transition: all ease 0.2s;
+    cursor: pointer;
+}
+.goDirction:hover{
+    scale: 0.9;
+}
+.goDirction:active{
+    background-color: rgb(11, 215, 89);
+    scale: 1;
+
+}
+#goLeft{
+    z-index: 30;
+    position: absolute;
+    bottom: 300px;
+    left: 10%;
+}
+#goRight{
+    z-index: 30;
+    position: absolute;
+    bottom: 300px;
+    right: 10%;
+}
+.arrow{
+    fill: aliceblue;
+    height: 90px;
+    width: 90px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.bottomLine{
+    height: 99%;
+    width: 30%;
+    border-bottom: solid 10px rgb(125, 125, 125);
+    margin: auto;
+}
+#footer{
+    position: relative;
+    background-color: var(--green);
+    height: 1000px;
+    width: 100%;
+    border-radius: 200px 200px 0px 0px;
+}
+#footerctnr{
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 1000px;
+    width: 60%;
+    border-radius: 200px 200px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    /* justify-content: center; */
+    align-content: center;
+    justify-items: center;
+}
+.support_title{
+    color: aliceblue;
+    font-size: 170px;
+    font-family: sans-serif,serif ;
+    font-weight: 800;
+    line-height: 120px;
+    text-shadow: 0px -20px 100px rgba(13, 144, 53, 0.525);
+}
+#support_socialIcons{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    column-gap: 10px;
+}
+.socialIcons{
+    fill: #878787;
+    height: 55px;
+    padding: 20px;
+    background-color: #eaeaea;
+    border-radius: 30px;
+
+}
+#leftside{
+    margin-top: 100px;
+    height: 50%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    row-gap: 50px;
+}
+#rightside{
+    margin-top: 100px;
+    font-size: 50px;    
+    color: aliceblue;
+    height: 50%;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-content: center;
+    align-content: center;
+    /* justify-items: center; */
+    gap: 100px 400px ;
+}
+#rightside > a {
+    text-decoration: none;
+    font-size: 50px;
+    color: aliceblue;
+    font-weight: 600;
+}
+.dwnldBTN{
+    fill: #b5b5b5;
+    height: 70px;
+    transition: all ease 0.1s;
+
+}
+.dwnldBTN:hover{
+    height: 65px;
+    fill: #d1cfcf;
+
+
+}
+.dwnldBTN:active{
+    height: 75px;
+    fill: #fafafa;
+
+}
+
+/* animate */
+.animate{
+    opacity: 1;
+    transition: all ease 1s;
+    translate: 0px -80px;
+
+}
+.animate_geo1{
+    opacity: 1;
+    transition: all ease 1s;
+    translate: -300px 0px;
+    rotate: 40deg;
+}
+.animate_geo2{
+    opacity: 1;
+    transition: all ease 1s;
+    translate: 300px 0px;
+    rotate: -40deg;
+
+}
+.animate_geo3{
+    opacity: 1;
+    transition: all ease 1s;
+    translate: -400px 0px;
+    rotate: 60deg;
+
+}
+.animate_geo4{
+    opacity: 1;
+    transition: all ease 1s;
+    translate: 350px 0px;
+    rotate: -50deg;
+
+}
+.animate_geo5{
+    opacity: 1;
+    transition: all ease 1s;
+    translate: -450px 0px;
+    rotate: 70deg;
+
+}
